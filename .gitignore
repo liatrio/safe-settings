@@ -1,3 +1,5 @@
+.secret*
+.secrets/*
 deployment-settings.yml
 npm-debug.log
 .DS_Store
