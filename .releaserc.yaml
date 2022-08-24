@@ -1,0 +1,13 @@
+branches: [
+    'main',
+    'next',
+    'next-major',
+    { name: 'test-*', prerelease: true},
+]
+repositoryUrl: 'git@github.com:daileyo/test-semantic-release.git'
+preset: conventionalcommits
+plugins:
+  - '@semantic-release/commit-analyzer'
+  - '@semantic-release/release-notes-generator'
+  - '@semantic-release/git'
+  - '@semantic-release/github'
