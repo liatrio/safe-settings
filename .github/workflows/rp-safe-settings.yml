@@ -13,7 +13,7 @@ env:
   REGISTRY: ghcr.io
   REPOSITORY: ${{ github.repository }}
   GHCR_TOKEN: ${{ secrets.GH_FULL_TOKEN }}
-  SEMANTIC_RELEASE_TOKEN: ${{ secrets.GH_FULL_TOKEN }
+  GH_TOKEN: ${{ secrets.GH_FULL_TOKEN }
 
 jobs:
   release:
@@ -31,8 +31,7 @@ jobs:
         id: cycjimmy_release
         uses: cycjimmy/semantic-release-action@v3
         env:
-          GITHUB_TOKEN: ${{ env.SEMANTIC_RELEASE_TOKEN }}
-          GH_TOKEN: ${{ env.GHCR_TOKEN }}
+          GITHUB_TOKEN: ${{ env.GH_TOKEN }}
   
   publish:
     needs: release
