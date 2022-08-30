@@ -12,8 +12,7 @@ on:
 env:
   REGISTRY: ghcr.io
   REPOSITORY: ${{ github.repository }}
-  GHCR_TOKEN: ${{ secrets.GH_FULL_TOKEN }}
-  GH_TOKEN: ${{ secrets.GH_FULL_TOKEN }}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   release:
@@ -47,7 +46,7 @@ jobs:
         with: 
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }} 
-          password: ${{ env.GHCR_TOKEN }}
+          password: ${{ env.GH_TOKEN }}
 
       - name: Build and Publish Image
         uses: docker/build-push-action@v3
