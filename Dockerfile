@@ -5,6 +5,8 @@ LABEL version="1.0" \
       description="Probot app which is a modified version of Settings Probot GitHub App" \
       maintainer="GitHub Professional Services <services@github.com>"
 
+LABEL org.opencontainers.image.source https://github.com/liatrio/safe-settings
+
 ## Set our working directory
 WORKDIR /opt/safe-settings
 
