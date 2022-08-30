@@ -4,7 +4,7 @@ branches: [
     'next-major',
     { name: 'test-*', prerelease: true},
 ]
-repositoryUrl: 'git@github.com:daileyo/test-semantic-release.git'
+repositoryUrl: 'https://github.com/liatrio/safe-settings.git'
 preset: conventionalcommits
 plugins:
   - '@semantic-release/commit-analyzer'
