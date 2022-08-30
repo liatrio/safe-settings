@@ -36,7 +36,7 @@ jobs:
     needs: release
     name: Publish Image
     runs-on: ubuntu-latest
-    if: needs.release.outputs.changed == 'true'
+    # if: needs.release.outputs.changed == 'true'
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
