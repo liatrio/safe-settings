@@ -13,7 +13,7 @@ env:
   REGISTRY: ghcr.io
   REPOSITORY: ${{ github.repository }}
   GHCR_TOKEN: ${{ secrets.GH_FULL_TOKEN }}
-  GH_TOKEN: ${{ secrets.GH_FULL_TOKEN }
+  GH_TOKEN: ${{ secrets.GH_FULL_TOKEN }}
 
 jobs:
   release:
