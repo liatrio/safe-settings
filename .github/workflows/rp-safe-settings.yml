@@ -55,3 +55,12 @@ jobs:
            context: .
            push: true
            tags: ${{ env.REGISTRY }}/${{ env.REPOSITORY }}:latest, ${{ env.REGISTRY }}/${{ env.REPOSITORY }}:v${{ needs.release.outputs.newVersion }}
+  
+  deploy:
+    needs: publish
+    name: Deploy to prod
+    runs-on: [self-hosted, liatrio-runners-sharedsvc]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
